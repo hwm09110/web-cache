@@ -10,8 +10,8 @@ const port = 3600;
 
 app.use(async (ctx, next) => {
   ctx.set({
-    // 'Cache-Control': 'no-cache'
-    'Cache-Control': 'max-age=30'
+    'Cache-Control': 'no-cache'
+    // 'Cache-Control': 'max-age=60'
   });
 
   // ctx.set({
@@ -25,7 +25,7 @@ app.use(async (ctx, next) => {
   await next();
 });
 app.use(conditional());
-// app.use(etag());
+app.use(etag());
 
 app.use(resource(path.join(__dirname, './static')));
 
