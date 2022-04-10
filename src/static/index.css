@@ -5,3 +5,7 @@ body {
 img {
   width: 500px;
 }
+
+a {
+  background-color: red;
+}

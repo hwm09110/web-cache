@@ -10,16 +10,13 @@ const port = 3600;
 
 app.use(async (ctx, next) => {
   ctx.set({
-    'Cache-Control': 'no-cache'
-    // 'Cache-Control': 'max-age=60'
+    'Cache-Control': 'max-age=60'
+    // 'Cache-Control': 'no-cache'
+    // 'last-Modified': new Date(Date.now() + 60 * 1000).toUTCString()
   });
 
   // ctx.set({
-  //   'last-Modified': new Date(Date.now() + 10 * 1000).toUTCString()
-  // });
-
-  // ctx.set({
-  //   expires: new Date(Date.now() + 30 * 1000).toGMTString()
+  //   'last-Modified': new Date(Date.now() + 60 * 1000).toUTCString()
   // });
 
   await next();

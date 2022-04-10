@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/index.js"
+    "cache": "nodemon ./src/index.js"
   },
   "author": "hwm",
   "license": "ISC",
